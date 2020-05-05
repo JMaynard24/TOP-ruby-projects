@@ -38,6 +38,10 @@ until cipher_amount.to_i > 0 do
     if cipher_amount.to_i <= 0
         puts "Error! Not a number, 0, or negative numbers not allowed!. Try again!"
     end
+    if cipher_amount.to_i > 1000000
+        puts "That's quite a big number! Please enter something smaller. (Max 1000000)"
+        cipher_amount = "0"
+    end
 end
 
 final_string = cipher string_to_cipher, cipher_amount.to_i
